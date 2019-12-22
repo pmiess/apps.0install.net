@@ -1,0 +1,34 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
+<interface uri="https://apps.0install.net/golang/go.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>Go</name>
+  <summary>tool for managing Go source code</summary>
+  <description>This is a tool for managing Go source code. Go is an open source programming language that makes it easy to build simple, reliable, and efficient software.</description>
+  <homepage>https://golang.org/</homepage>
+  <needs-terminal/>
+
+  <feed arch="Linux-*" src="https://apps.0install.net/golang/go-linux.xml"/>
+  <feed arch="Darwin-*" src="https://apps.0install.net/golang/go-darwin.xml"/>
+  <feed arch="Windows-*" src="https://apps.0install.net/golang/go-windows.xml"/>
+
+  <entry-point binary-name="go" command="run"/>
+  <entry-point binary-name="godoc" command="godoc">
+    <needs-terminal/>
+    <summary>extracts and generates documentation</summary>
+    <description>Godoc extracts and generates documentation for Go programs.</description>
+  </entry-point>
+  <entry-point binary-name="gofmt" command="gofmt">
+    <needs-terminal/>
+    <summary>formats Go programs</summary>
+    <description>Gofmt formats Go programs. It uses tabs for indentation and blanks for alignment. Alignment assumes that an editor is using a fixed-width font.</description>
+  </entry-point>
+</interface>
+<!-- Base64 Signature
+iQEcBAABAgAGBQJeA33wAAoJEFmqOSfCTk4eFKYH/3Ito/kH0ImnWUFqvztKlj7TVQpwwiklNSzk
+HcUExQM4pReqhCDlbP9S/8kLxoe3rCG+/zrr3D1rGcVwPHDM0agMxVChephdma/cC6qZ/hfcfrcG
+hw2xBiN+gH7oNjVfB61ExV90EPZFt5l8z0OHKn3JAX6uykaki2wqHp9kVYlCibVHezjszvNh7DpF
+poSkYzbOdjvYbwsQYT9CEOu1KSF1Gty1fHVWwip4nDGNRE0i8kLFuXlK/Z0iJlN0/onylXgMxtAY
+A7DnOHZy0yObUyNBejG5eXc5T+8pgMKRB0IbnMwcoVRtfNbkemnMxe7CLNn7uVQ7J+pZS5vXGjj2
+vhg=
+
+-->

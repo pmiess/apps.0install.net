@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
+<interface uri="https://apps.0install.net/python/dbus-python.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>dbus-python</name>
+  <summary>dbus-python</summary>
+  <description/>
+  <package-implementation distributions="Gentoo" package="dev-python/dbus-python"/>
+  <package-implementation distributions="RPM" package="python-dbus"/>
+  <package-implementation distributions="RPM" package="dbus-1-python"/>
+  <package-implementation distributions="RPM" package="dbus-python"/>
+  <package-implementation distributions="Debian" package="python-dbus"/>
+</interface>
+<!-- Base64 Signature
+iQEcBAABAgAGBQJeA339AAoJEFmqOSfCTk4eXXoH/jg4XV7aEoaJFf68GDItluT3M50rmPk35KQr
+ANjBzr6Ai1GBo3a+g7dIYtDdDi213fJR9s+GaJpRJV5QCZDlAAicziSL79anO3DwjD34vUWYiAhz
+kui20lFOHqhcApV8oS2Uti+BJdI7I3tUugqZdth3XLe/OZOvRV02PVOOhDDPpdS7H6rkqfCi/dm7
+HblyNh4JuBrwxCrC1CHTdjjqAKExxINERGgdtamGWn9ILnm4SKpEmFPyPxd17sC43u2uOOWNt40k
+VlJF4WMW3yl767EF4U7FUw2jyatwsAPQjr+Ga3pBjrE7H5saXNmn9B3Mdl13DCeiaxNhtpvf6Pqz
+7ls=
+
+-->

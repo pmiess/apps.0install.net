@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
+<interface uri="https://apps.0install.net/powershell/powershell.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>PowerShell</name>
+  <summary>virtual feed combining Windows PowerShell and PowerShell Core</summary>
+  <homepage>https://microsoft.com/powershell</homepage>
+
+  <feed src="https://apps.0install.net/powershell/core.xml"/>
+  <feed arch="Windows-*" src="https://apps.0install.net/powershell/windows.xml"/>
+</interface>
+<!-- Base64 Signature
+iQEcBAABAgAGBQJeA339AAoJEFmqOSfCTk4eAfcH/jFsTh+qTsbmrXXexaGF8f9Yaq/IDsYLvO6F
+M78q/vZrl8QBxw/DBPsRcFCB2T6KaCSGrSH69bCpDqf23+W/62CAb+fCumZlLM2MF4ZM6pcjJgGv
+Ts4ThG+7iIypNbgWJoAAZ7pMyYuUdPKyULQImzb9Sa0r5C+hiZrpOT6ZXp6LazrA5OzJ9d9vfs9m
+JYHHJtrIYdiNyrcaDaGsR9+hOLM1gtpfoVucFefEpwXg6mXk5ZF0CVv8EqKYgKf6ZkF3tRwDkX4u
+dsLmvI1YawclonrDwr5a0Q1MTefmpOrLM8G1wrtTOIYDYUZHII1ydLMkz3H7441lIVY/puR0CY40
+9LQ=
+
+-->

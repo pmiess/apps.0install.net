@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>apps.0install.net: Java</title>
+  </head>
+  <body>
+    <h1><a href="https://apps.0install.net/">apps.0install.net</a> - Java</h1>
+    <p>
+      To get the traditional Java commands:
+    </p>
+
+    <pre>
+      $ 0alias java https://apps.0install.net/java/openjdk-jre
+      $ 0alias javac https://apps.0install.net/java/openjdk-jdk
+    </pre>
+
+    <p>
+      The other tools are available by passing the tool name as a third argument, e.g.
+    </p>
+
+    <pre>
+      $ 0alias javadoc https://apps.0install.net/java/openjdk-jdk javadoc
+    </pre>
+
+    <p>
+      To get common Java build tools:
+    </p>
+
+    <pre>
+      $ 0alias ant https://apps.0install.net/java/ant
+      $ 0alias mvn https://apps.0install.net/java/maven
+      $ 0alias gradle https://apps.0install.net/java/gradle
+    </pre>
+
+    <p>
+      When making packages that depend on Java, either add the JRE's bin directory to <code>PATH</code>,
+      or use this pattern:
+    </p>
+
+    <pre>
+      "${MYPROG_JRE_BIN}java" ...
+    </pre>
+
+    <p>
+      If Zero Install selects a native version of Java (part of your distribution) then
+      <code>MYPROG_JRE_BIN</code> will expand to the empty string and the command will simply invoke <code>java</code>.
+      Otherwise, it will run java from the selected Zero Install implementation.
+    </p>
+
+    <h2>Available feeds</h2>
+
+    <ul>
+      <li><a href="openjdk-jre.xml">OpenJDK JRE (Runtime)</a></li>
+      <li><a href="openjdk-jdk.xml">OpenJDK JDK (Developer Kit)</a></li>
+      <li><a href="ant.xml">Apache Ant</a> (pure Java build tool)</li>
+      <li><a href="kotlin.xml">Kotlin</a> (statically typed programming language for modern multiplatform applications)</li>
+      <li><a href="maven.xml">Apache Maven</a> (build manager for Java projects)</li>
+      <li><a href="gradle.xml">Gradle</a> (modern open source build tool for continuous delivery)</li>
+      <li><a href="scala.xml">Scala</a> (functional and object-oriented programming language based on the Java Virtual Machine)</li>
+      <li><a href="swt.xml">SWT</a> (the Standard Widget Toolkit)</li>
+      <li><a href="hsqldb.xml">HyperSQL</a> (100% Java Database)</li>
+      <li><a href="iris.xml">IRIS Reasoner</a> (Datalog reasoner)</li>
+      <li><a href="sablecc.xml">SableCC</a> (Parser generator)</li>
+    </ul>
+  </body>
+</html>

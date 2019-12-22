@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
+<interface uri="https://apps.0install.net/kubernetes/helm.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>Kubernetes Helm</name>
+  <summary>the Kubernetes package manager</summary>
+  <description>Helm is a tool for managing Kubernetes charts. Charts are packages of pre-configured Kubernetes resources.</description>
+  <homepage>https://helm.sh/</homepage>
+  <needs-terminal/>
+
+  <feed src="https://apps.0install.net/kubernetes/helm-2.xml"/>
+  <feed src="https://apps.0install.net/kubernetes/helm-3.xml"/>
+
+  <entry-point binary-name="helm" command="run"/>
+</interface>
+<!-- Base64 Signature
+iQEcBAABAgAGBQJeA332AAoJEFmqOSfCTk4eeCwH/1FTbncfEYVa2LR2x1irIPZx9o+zPlNJngIH
+PsutUjrdKMI3H9VML2TQ8rz5LXrpx6stVGfbu9uvKfU/vkszbCK9JqKK9yocn4r7JcG9wt/tHkKv
+iKCYrBHFIixGoJ1O/uZpaDcRZPvCtMC+qED3uS2iriF2QI5/TLrfckvPHb1KXOOymkDugynXK3Z1
+QCETAizLyFh+V56G8F1x+RP2wvADdZJdtxfdx3V4TITh+njAFHJkiclGhMmVN/VY/Ew9AqI6uJ8I
+cYkmwsjm72nFzOlmdWuxkRxcSVg6cJcT1yxUlVOG/mbQHFacH3G2XsxmYwXDjbq9st0+S/62TOLv
++Qc=
+
+-->

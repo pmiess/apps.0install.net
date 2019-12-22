@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>apps.0install.net: Kubernetes tools</title>
+  </head>
+  <body>
+    <h1><a href="https://apps.0install.net/">apps.0install.net</a> - Kubernetes tools</h1>
+    <p>
+      Kubernetes is an open source system for managing containerized applications across multiple hosts.
+    </p>
+
+    <p>To add the Kubernetes client CLI to your <code>PATH</code>:</p>
+    <pre>
+      $ 0alias kubectl https://apps.0install.net/kubernetes/kubectl
+    </pre>
+
+    <p>To add additional common Kubernetes tools to your <code>PATH</code>:</p>
+    <pre>
+      $ 0alias minikube https://apps.0install.net/kubernetes/minikube
+      $ 0alias helm https://apps.0install.net/kubernetes/helm
+    </pre>
+
+    <p>To make 0install automatically download a Helm (client) version that matches the Tiller (server) version:</p>
+    <pre>
+      $ 0install add helm https://apps.0install.net/kubernetes/helm-autoversion
+    </pre>
+
+    <p>To have 0install automatically pick Helm versions when pulled in as a dependency (e.g., from helmfile):</p>
+    <pre>
+      $ 0install add-feed https://apps.0install.net/kubernetes/helm https://apps.0install.net/kubernetes/helm-autoversion
+    </pre>
+
+    <h2>Official tools</h2>
+
+    <ul>
+      <li><a href="kubectl.xml">kubectl</a></li>
+      <li><a href="minikube.xml">Minikube</a></li>
+      <li><a href="helm.xml">Helm</a></li>
+      <li><a href="kompose.xml">Kompose</a></li>
+      <li><a href="kops.xml">kops</a></li>
+      <li><a href="svcat.xml">svcat</a></li>
+    </ul>
+
+    <h2>3rd party tools</h2>
+
+    <ul>
+      <li><a href="helmfile.xml">helmfile</a></li>
+      <li><a href="k9s.xml">k9s</a></li>
+      <li><a href="octant.xml">Octant</a></li>
+    </ul>
+  </body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>apps.0install.net: .NET</title>
+  </head>
+
+  <body>
+    <h1><a href="https://apps.0install.net/">apps.0install.net</a> - .NET</h1>
+
+    <h2>Command-line tools</h2>
+
+    <h3>Available feeds</h3>
+    <ul>
+      <li><a href="https://apps.0install.net/dotnet/docfx">DocFX</a> (documentation generation tool)</li>
+      <li><a href="https://apps.0install.net/dotnet/nuget">NuGet</a> (package manager for .NET)</li>
+      <li><a href="https://apps.0install.net/dotnet/nant">NAnt</a> (free .NET build tool)</li>
+    </ul>
+
+    <h3>Samples</h3>
+
+    <p>To add <code>nuget</code> (.NET Package Manager) to your <code>PATH</code>:</p>
+    <pre>      $ 0alias nuget https://apps.0install.net/dotnet/nuget
+    </pre>
+
+    <p>To add <code>nant</code> (free .NET build tool) to your <code>PATH</code>:</p>
+    <pre>      $ 0alias nant https://apps.0install.net/dotnet/nant
+    </pre>
+
+
+    <h2>.NET Core</h2>
+
+    <h3>Available feeds</h3>
+    <ul>
+      <li><a href="https://apps.0install.net/dotnet/core">.NET Core Runtime</a></li>
+      <li><a href="https://apps.0install.net/dotnet/core-sdk">.NET Core SDK</a></li>
+    </ul>
+
+    <h3>Samples</h3>
+
+    <p>To use .NET Core as the runner in a feed:</p>
+    <pre>      &lt;command name="run" path="myapp.dll"&gt;
+        &lt;runner interface="https://apps.0install.net/dotnet/core"/&gt;
+      &lt;/command&gt;
+    </pre>
+
+    <p>To add <code>dotnet</code> (.NET Core SDK) to your <code>PATH</code>:</p>
+    <pre>      $ 0alias dotnet https://apps.0install.net/dotnet/core-sdk
+    </pre>
+
+
+    <h2>Classic .NET</h2>
+
+    <h3>Available feeds</h3>
+    <ul>
+      <li><a href="https://apps.0install.net/dotnet/clr">Common Language Runtime</a></li>
+      <li><a href="https://apps.0install.net/dotnet/clr-monopath">Common Language Runtime with MONO_PATH support</a></li>
+      <li><a href="https://apps.0install.net/dotnet/mono">Mono</a></li>
+      <li><a href="https://apps.0install.net/dotnet/framework">.NET Framework</a></li>
+      <li><a href="https://apps.0install.net/dotnet/framework-client-profile">.NET Framework Client Profile</a></li>
+      <li><a href="https://apps.0install.net/dotnet/ironpython">IronPython</a></li>
+    </ul>
+
+    <h3>Samples</h3>
+
+    <p>To use a Common Lanaguage Runtime (Microsoft's .NET Framework or Mono) as the runner in a feed:</p>
+    <pre>      &lt;command name="run" path="myapp.exe"&gt;
+        &lt;runner interface="https://apps.0install.net/dotnet/clr"/&gt;
+      &lt;/command&gt;
+    </pre>
+
+    <p>To use either Microsoft's .NET Framework with emulated <code>MONO_PATH</code> support or Mono as the runner in a feed:</p>
+    <pre>      &lt;command name="run" path="myapp.exe"&gt;
+        &lt;runner interface="https://apps.0install.net/dotnet/clr-monopath"/&gt;
+      &lt;/command&gt;
+      &lt;requires interface="http://mylib/"&gt;
+        &lt;environment name="MONO_PATH" insert="."/&gt;
+      &lt;/requires&gt;
+    </pre>
+
+    <p>To use the full version of Microsoft's .NET Framework as the runner in a feed:</p>
+    <pre>      &lt;command name="run" path="myapp.exe"&gt;
+        &lt;runner interface="https://apps.0install.net/dotnet/framework"/&gt;
+      &lt;/command&gt;
+    </pre>
+
+    <p>To use either the Client Profile or the full version of Microsoft's .NET Framework as the runner in a feed:</p>
+    <pre>      &lt;command name="run" path="myapp.exe"&gt;
+        &lt;runner interface="https://apps.0install.net/dotnet/framework-client-profile"/&gt;
+      &lt;/command&gt;
+    </pre>
+
+    <p>To use Mono as the runner in a feed:</p>
+    <pre>      &lt;command name="run" path="myapp.exe"&gt;
+        &lt;runner interface="https://apps.0install.net/dotnet/mono"/&gt;
+      &lt;/command&gt;
+    </pre>
+
+    <p>To use IronPython (Python implementation running on the CLR) as the runner in a feed:</p>
+    <pre>      &lt;command name="run" path="myapp.py"&gt;
+        &lt;runner interface="https://apps.0install.net/dotnet/ironpython"/&gt;
+      &lt;/command&gt;
+    </pre>
+
+</body></html>

@@ -1,0 +1,39 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
+<interface uri="https://apps.0install.net/java/jar-launcher.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>JAR Launcher</name>
+  <summary>launcher that starts the main class while preserving the CLASSPATH</summary>
+  <description>A launcher that starts the main class specified in a JAR while preserving the CLASSPATH.
+Workaround for java -classpath ... -jar ... which does not work.</description>
+  <homepage>https://github.com/0install/jar-launcher</homepage>
+
+  <group license="MIT License">
+    <command name="run">
+      <environment insert="jar-launcher.jar" name="CLASSPATH"/>
+      <runner command="run" interface="https://apps.0install.net/java/openjdk-jre.xml">
+        <version not-before="1.3"/>
+        <arg>net.zeroinstall.jar.launcher.JarLauncher</arg>
+      </runner>
+    </command>
+    <command name="run-gui">
+      <environment insert="jar-launcher.jar" name="CLASSPATH"/>
+      <runner command="run-gui" interface="https://apps.0install.net/java/openjdk-jre.xml">
+        <version not-before="1.3"/>
+        <arg>net.zeroinstall.jar.launcher.JarLauncher</arg>
+      </runner>
+    </command>
+    <implementation id="1.0" stability="stable" version="1.0">
+      <manifest-digest sha1new="3706305d50a745c5a362b02aaf417d2d0765c9c1" sha256="60d4d71585f66a36ac1e3116f234ff93d0319b6d0dccb17e027e162cc9da0481" sha256new="MDKNOFMF6ZVDNLA6GELPENH7SPIDDG3NBXGLC7QCPYLCZSO2ASAQ"/>
+      <file dest="jar-launcher.jar" href="https://github.com/0install/apps.0install.net/releases/download/archives/jar-launcher-1.0.jar" size="3201"/>
+    </implementation>
+  </group>
+</interface>
+<!-- Base64 Signature
+iQEcBAABAgAGBQJeA33zAAoJEFmqOSfCTk4epssH/3J6pJ7mQZnKBFlqd7WKtLPL/yP2oXaaaD0K
+R8Efh9mjF9ERgVHny4WY+6RhDV34TMB+04YtigWVgx6KbBudNgDkh8Ct0L3iUgEHD47Om5J00+ag
+GHNJ1tQyKjQL6q0wEAdPQPXol0F2EnQb9zKCkXHj9RrCZuIUJocRSiYqm/FD4ROE5hCg8cipOoJJ
+AqNCvsiADUuxMC6bVsj0InxuUo7fwIiqCFvFc0JkV7xGx88BdDGRXG7LmaNBFSYaxa+4oj6PjfmX
+YTJ0JL2KMA1W6eVzobOXOtvrWtBbTeVKdg5EHPv9qS96koKPlm9rcAX/x1u9kcMXEjSNmHqwwsA5
+4m0=
+
+-->

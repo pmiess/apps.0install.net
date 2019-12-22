@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
+<interface uri="https://apps.0install.net/powershell/windows.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>Windows PowerShell</name>
+  <summary>PowerShell bundled with Windows</summary>
+  <homepage>https://microsoft.com/powershell</homepage>
+  <feed-for interface="https://apps.0install.net/powershell/powershell.xml"/>
+
+  <package-implementation distributions="Windows" package="powershell"/>
+</interface>
+<!-- Base64 Signature
+iQEcBAABAgAGBQJeA339AAoJEFmqOSfCTk4e4H4IAIx+uMUHlWUZCcTTI0mATvHpjkZTajyW6Wb7
+l3dKAhpBDEfOWeKOybqRbplF+vrcfpX867qdHoi1ZVZVN2XNZpsgVUX2I2mCyuOx1n/AgMPSYLmC
+xyJOQ0Eq2NqAuSpDd9q98iyHwucIcav9Z8Q9ps5Q5B+ZheEECn858VlYfknwcVJ561u/qkhcrHV8
+PGf9gSWBcbdu0WBbEPGs4Pm4tEn8TJXxG5BfFGWBLsomT6UCrHtpG0UMgvZ6GJ+f7kzA35LSYMV0
+ytlvmJ8f8bAjlPq+1uaOswG2szvOp80raRYnZekUf4maSaVcxZJGNR66Qz7VY/hLrQPKk7FdkEhY
+o24=
+
+-->

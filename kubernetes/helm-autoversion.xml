@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
+<interface uri="https://apps.0install.net/kubernetes/helm-autoversion.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>Helm Autoversion</name>
+  <summary>wrapper for Helm that auto-downloads client matching server version</summary>
+  <description>A wrapper for Kubernetes Helm that automatically downloads a Helm (client) version that matches the Tiller (server) version.</description>
+  <needs-terminal/>
+
+  <!--
+    Intended to be registered by users via:
+    0install add-feed https://apps.0install.net/kubernetes/helm.xml https://apps.0install.net/kubernetes/helm-autoversion.xml
+    -or-
+    0install add helm https://apps.0install.net/kubernetes/helm-autoversion.xml
+  -->
+  <feed-for interface="https://apps.0install.net/kubernetes/helm-2.xml"/>
+
+  <!-- Marked as version 3-pre to be considered "better" than all Helm 2.x releases but not as a candidate for Helm >= 3.0. -->
+  <implementation id="sha1new=a551fc5839686a79ee5fe9b7412f0bcb82b43605" license="MIT License" released="2019-07-16" stability="stable" version="3-pre">
+    <manifest-digest sha256new="YK4PPBMOGQYPFR227KIBN3NCXBE3FM2FGY2NMOAAOX3R7N66RPUA"/>
+    <command name="run" path="helm-autoversion.py">
+      <runner interface="https://apps.0install.net/python/python.xml"/>
+    </command>
+    <archive href="https://github.com/0install/apps.0install.net/releases/download/archives/helm-autoversion.zip" size="1035" type="application/zip"/>
+  </implementation>
+
+</interface>
+<!-- Base64 Signature
+iQEcBAABAgAGBQJeA332AAoJEFmqOSfCTk4emAwH/1K4DmdVjmbceTEi0wc/s4GayJ8URLZH7HOE
+0vmSpJoOdAAUTV/4qN6GkVlo5LfviyUc53+UAeKqbc8+MGFSTeYJJBRk2YvJYZ+CgwdytkxbWa7M
+6wje9vMqjiMoPhPafVXg1CzTSU1//oR2erZPg14LhiYzryZjXx5mTWyCzyDMXicS8nZ5SRzBzuB6
+tQiQeN8smrQpl5xidcPQ9x8DnqwAX5z7LIRMxgd+4BP+BwSBIVYhV38sE/C0Y3bCEhIazYPBGSHh
+DfcGnqujYVXuA7j2yPcWmVtX5X3x5znFxqK/6lI1FDCsD20zn3K4z0Ff/7NPLLjavz2ir1Gi8agQ
+j3U=
+
+-->
