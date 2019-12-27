@@ -10,16 +10,16 @@
   <homepage>http://gnuwin32.sourceforge.net/packages/chess.htm</homepage>
   <needs-terminal/>
   <implementation arch="Windows-*" id="sha1new=1a0d8fe1591458c793f034fa6b6e03b788a60c41" license="GPL v2 (GNU General Public License)" released="2003-10-25" version="5.7-3">
-    <requires interface="http://repo.roscidus.com/lib/readline4">
+    <requires interface="http://repo.roscidus.com/lib/readline4.xml">
       <environment insert="bin" name="PATH"/>
     </requires>
-    <requires interface="hhttps://apps.0install.net/lib/pthreads-win32.xml">
+    <requires interface="https://apps.0install.net/lib/pthreads-win32.xml">
       <environment insert="." name="PATH"/>
     </requires>
     <executable-in-path name="gnuchess"/>
     <command name="run" path="bin/gnuchess.exe"/>
     <command name="gnuchessx" path="bin/gnuchessx">
-      <runner interface="https://apps.0install.net/utils/bash"/>
+      <runner interface="https://apps.0install.net/utils/bash.xml"/>
     </command>
     <manifest-digest sha256new="H3IUO46QRAYS7POGPXRDKNZD7MRZZXEKTQMBPYESD4OQCCWAPZKQ"/>
     <archive href="https://sourceforge.net/projects/gnuwin32/files/chess/5.07/chess-5.07-bin.zip" size="168874" type="application/zip"/>
