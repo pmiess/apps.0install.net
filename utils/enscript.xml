@@ -1,0 +1,106 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="https://apps.0install.net/utils/enscript.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>Enscript</name>
+  <summary xml:lang="en">Enscript: convert text files to PostScript, HTML, RTF, ANSI, and overstrikes</summary>
+  <description xml:lang="en">Enscript converts text files to PostScript or to other output languages. Enscript can spool the generated output directly to a specified printer or leave it to a file. If no input files are given, enscript processes the standard input stdin. Enscript can be extended to handle different output media and it has many options which can be used to customize the printouts. </description>
+  <icon href="https://raw.githubusercontent.com/0install/0install.de-feeds/master/Gow.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/0install.de-feeds/master/Gow.png" type="image/png"/>
+  <category>Office</category>
+  <homepage>http://gnuwin32.sourceforge.net/packages/enscript.htm</homepage>
+  <needs-terminal/>
+  <implementation arch="Windows-*" id="sha1new=e6c17e40a548e5bc9758e8003bda2763e418f492" license="GPL v2 (GNU General Public License)" released="2003-07-19" version="1.6.3-9">
+    <requires interface="https://apps.0install.net/devel/libintl.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <requires interface="https://apps.0install.net/lib/libiconv.xml" version="1.8..!1.9">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <executable-in-path name="enscript"/>
+    <command name="run" path="bin/enscript.exe"/>
+    <command name="mkafmmap" path="bin/mkafmmap.exe"/>
+    <command name="states" path="bin/states.exe"/>
+    <command name="diffpp" path="bin/diffpp">
+      <runner interface="http://repo.roscidus.com/perl/perl.xml"/>
+    </command>
+    <command name="over" path="bin/over">
+      <requires interface="https://apps.0install.net/utils/less.xml">
+        <executable-in-path name="less"/>
+      </requires>
+      <runner interface="https://apps.0install.net/utils/bash.xml"/>
+    </command>
+    <command name="sliceprint" path="bin/sliceprint">
+      <runner interface="https://apps.0install.net/perl/perl.xml"/>
+    </command>
+    <manifest-digest sha256new="BQD4ZTJ4VRCAO466BO3F2QHX64RDFMDABGYPEVTRGRSRSLCEMB2A"/>
+    <archive href="https://sourceforge.net/projects/gnuwin32/files/enscript/1.6.3-9/enscript-1.6.3-9-bin.zip" size="654746" type="application/zip"/>
+    <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/enscript-bin.zip?raw=true" size="654746" type="application/zip"/>
+  </implementation>
+  <package-implementation distributions="Gentoo" package="app-text/enscript"/>
+  <package-implementation package="enscript"/>
+  <entry-point binary-name="enscript" command="run">
+    <needs-terminal/>
+    <name xml:lang="en">Enscript</name>
+    <summary xml:lang="en">enscript  - convert text files to PostScript, HTML, RTF,</summary>
+    <description xml:lang="en">Enscript converts text files to PostScript or  to  other
+       output languages.  Enscript can spool the generated out-
+       put directly to a specified printer or  leave  it  to  a
+       file.   If  no input files are given, enscript processes
+       the standard input stdin.  Enscript can be  extended  to
+       handle  different  output  media and it has many options
+       which can be used to customize the printouts.</description>
+  </entry-point>
+  <entry-point binary-name="mkafmmap" command="mkafmmap">
+    <needs-terminal/>
+    <name xml:lang="en">MkAfmMap</name>
+    <summary xml:lang="en">MkAfmMap: create font map for AFM files</summary>
+  </entry-point>
+  <entry-point binary-name="states" command="states">
+    <needs-terminal/>
+    <name xml:lang="en">states</name>
+    <summary xml:lang="en">States: AWK alike text processing tool</summary>
+    <description xml:lang="en">States is an awk-alike text processing  tool  with  some
+       state  machine  extensions.   It is designed for program
+       source code highlighting  and  to  similar  tasks  where
+       state information helps input processing.
+
+       At  a single point of time, States is in one state, each
+       quite similar to awk's work environment, they have regu-
+       lar  expressions  which  are  matched from the input and
+       actions which are executed when a match is found.   From
+       the action blocks, states can perform state transitions;
+       it can move to another state from which  the  processing
+       is  continued.  State transitions are recorded so states
+       can return to the calling state once the  current  state
+       has finished.
+
+       The  biggest  difference between states and awk, besides
+       state machine extensions, is that states  is  not  line-
+       oriented.  It matches regular expression tokens from the
+       input and once a match is processed, it  continues  pro-
+       cessing  from  the current position, not from the begin-
+       ning of the next input line.</description>
+  </entry-point>
+  <entry-point binary-name="diffpp" command="diffpp">
+    <needs-terminal/>
+    <name xml:lang="en">Diffpp</name>
+    <summary xml:lang="en">Diffpp: pretty-print diff outputs with GNU enscript</summary>
+    <description xml:lang="en">Diffpp converts diff(1)-program's output files to a for-
+       mat suitable to be printed with GNU  enscript(1).   Pro-
+       gram  annotates  the  changes  with  enscript's  special
+       escapes so enscript can highlight the modified  portions
+       of  the  file.   All changed and added lines are printed
+       with gray-background,  deleted  lines  are  marked  with
+       minus  (`-') characters; diffpp prints one minus charac-
+       ter for each deleted line.</description>
+  </entry-point>
+  <entry-point binary-name="over" command="over">
+    <needs-terminal/>
+    <name xml:lang="en">over</name>
+  </entry-point>
+  <entry-point binary-name="sliceprint" command="sliceprint">
+    <needs-terminal/>
+    <name xml:lang="en">sliceprint</name>
+    <summary xml:lang="en">sliceprint: slice documents with long lines.</summary>
+  </entry-point>
+</interface>
