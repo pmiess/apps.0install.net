@@ -1,0 +1,34 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="https://apps.0install.net/games/chess.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>Chess</name>
+  <summary xml:lang="en">Chess: GNU chess program</summary>
+  <description xml:lang="en">GNU Chess lets most modern computers play a full game of chess. It has a plain terminal interface but supports visual interfaces such as X-Windows &quot;xboard&quot; or MS-Windows Winboard</description>
+  <icon href="https://raw.githubusercontent.com/0install/0install.de-feeds/master/Gow.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/0install.de-feeds/master/Gow.png" type="image/png"/>
+  <category>Game</category>
+  <homepage>http://gnuwin32.sourceforge.net/packages/chess.htm</homepage>
+  <needs-terminal/>
+  <implementation arch="Windows-*" id="sha1new=1a0d8fe1591458c793f034fa6b6e03b788a60c41" license="GPL v2 (GNU General Public License)" released="2003-10-25" version="5.7-3">
+    <requires interface="http://repo.roscidus.com/lib/readline4">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <requires interface="hhttps://apps.0install.net/lib/pthreads-win32.xml">
+      <environment insert="." name="PATH"/>
+    </requires>
+    <executable-in-path name="gnuchess"/>
+    <command name="run" path="bin/gnuchess.exe"/>
+    <command name="gnuchessx" path="bin/gnuchessx">
+      <runner interface="https://apps.0install.net/utils/bash"/>
+    </command>
+    <manifest-digest sha256new="H3IUO46QRAYS7POGPXRDKNZD7MRZZXEKTQMBPYESD4OQCCWAPZKQ"/>
+    <archive href="https://sourceforge.net/projects/gnuwin32/files/chess/5.07/chess-5.07-bin.zip" size="168874" type="application/zip"/>
+  </implementation>
+  <package-implementation distributions="Gentoo" package="games-board/gnuchess"/>
+  <package-implementation package="gnuchess"/>
+  <entry-point binary-name="gnuchess" command="run"/>
+  <entry-point binary-name="gnuchessx" command="gnuchessx">
+    <needs-terminal/>
+    <name xml:lang="en">gnuchessx</name>
+  </entry-point>
+</interface>
