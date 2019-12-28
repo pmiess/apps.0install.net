@@ -3,7 +3,7 @@
 <interface uri="https://apps.0install.net/utils/zip.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
   <name>Zip</name>
   <summary xml:lang="en">Zip: package and compress zip-archive files</summary>
-  <description xml:lang="en">Zip is a compression and file packaging/archive utility. Although \highly compatible both with PKWARE's PKZIP and PKUNZIP utilities for MS-DOS and with Info-ZIP's own UnZip, our primary objectives have been portability and other-than-MSDOS functionality. Features not found in the PKWARE version include: 
+  <description xml:lang="en">Zip is a compression and file packaging/archive utility. Although highly compatible both with PKWARE's PKZIP and PKUNZIP utilities for MS-DOS and with Info-ZIP's own UnZip, our primary objectives have been portability and other-than-MSDOS functionality. Features not found in the PKWARE version include: 
 •creating zipfiles in a pipe or on a device 
 •VMS and OS/2 extended file attributes 
 •conversion between Unix, MS-DOS and Macintosh text file formats 
@@ -16,7 +16,7 @@ Zip has one compression method (deflation) and can also store files without comp
   <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/utils/unzip.ico" type="image/vnd.microsoft.icon"/>
   <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/utils/unzip.png" type="image/png"/>
   <category>Utility</category>
-  <homepage>http://gnuwin32.sourceforge.net/packages/zip.htm</homepage>
+  <homepage>http://infozip.sourceforge.net/Zip.html</homepage>
   <needs-terminal/>
   <implementation arch="Windows-i486" id="sha1new=8649b604ca541f624ab44604763459e70c535739" license="Info-Zip" released="2008-07-13" version="3.0-3">
     <requires interface="https://apps.0install.net/utils/bzip2.xml" version="1.0.5">
@@ -33,6 +33,24 @@ Zip has one compression method (deflation) and can also store files without comp
     <archive href="https://sourceforge.net/projects/gnuwin32/files/zip/3.0/zip-3.0-bin.zip" size="576934" type="application/zip"/>
     <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/zip-3.0-bin.zip?raw=true" size="576934" type="application/zip"/>
   </implementation>
+  <group arch="Windows-*" license="Info-Zip" version="3.0">
+    <command name="run" path="zip.exe"/>
+    <command name="zipcloak" path="zipcloak.exe"/>
+    <command name="zipnote" path="zipnote.exe"/>
+    <command name="zipsplit" path="zipsplit.exe"/>
+    <implementation arch="Windows-i386" id="sha1new=9cb82d3add2b91cb43281e5a81f9ca9fe48fcae7" released="2008-10-18">
+      <manifest-digest sha256new="7KGLL2X7MWE75WNEVLEOUBRZRPK4VLJ6QVCGBM372KLYKPFDQQGQ"/>
+      <archive href="ftp://ftp.info-zip.org/pub/infozip/win32/zip300xn.zip" size="355794" type="application/zip"/>
+      <archive href="https://www.glaver.org/infozip/win32/zip300xn.zip" size="355794" type="application/zip"/>
+      <archive href="ftp://ftp.elf.stuba.sk/pub/pc/pack/zip30xn.zip" size="355916" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=dd507144dd47374d44b82cda522b5322c1e2f4c7" released="2009-12-30">
+      <manifest-digest sha256new="EA6NG2TIFALL5ECVQSORNKMWXHNKHNEW4UC3NX53H7IWNGNLV22A"/>
+      <archive href="ftp://ftp.info-zip.org/pub/infozip/win32/zip300xn-x64.zip" size="483920" type="application/zip"/>
+      <archive href="https://www.glaver.org/infozip/win32/zip300xn-x64.zip" size="483920" type="application/zip"/>
+      <archive href="ftp://ftp.elf.stuba.sk/pub/pc/pack/zip30xnx.zip" size="484392" type="application/zip"/>
+    </implementation>
+  </group>
   <package-implementation distributions="Gentoo" package="app-arch/zip"/>
   <package-implementation package="zip" main="/usr/bin/zip"/>
   <entry-point binary-name="zip" command="run">
